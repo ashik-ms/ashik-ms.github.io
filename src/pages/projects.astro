@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Projects</div>
+  </div>
+
+  <div> 
+
+  <HorizontalCard
+    title="Zostel Product Enhancement"
+    img="/zostel.png"
+    desc="Led a team project on enhancing Zostels app functionality as part of Product Management coursework at SP Jain Institute of Management and Research, focusing on community engagement features and event-hosting capabilities to improve guest experience, conversion rates, and user retention.Developed the concept of ZoWorks for Zostel, targeting remote workers with superior infrastructure to expand market share, aligning with the growing remote work trend created detailed mockups to illustrate proposed features and user experience improvements."
+    url="#"
+    badge="NEW"
+
+  
+  />
+  <a href="https://wireframepro.mockflow.com/view/MyqW3bfJ5qb#/page/D5b2c77c501270dc7f0cdf78670baf285"class="mb-5 link  block"> UI mockup </a>
+  <a href="/Zostel_Final Document.pdf"class="mp-5 link link-primary"> The full report </a>
+  </div>
+  
+
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 2"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+  />
+
+  
+
+</BaseLayout>
