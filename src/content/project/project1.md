@@ -7,7 +7,7 @@ tags: ["Product_Management"]
 ---
 
 [UI mockeup of proposed features](https://wireframepro.mockflow.com/view/MyqW3bfJ5qb#/page/31da9c5d4ecb437ba33bead3254f8845)  
-[Full report](/public/Zostel/Zostel_Final%20Document.pdf)
+[Full report](/Zostel/Zostel_Final%20Document.pdf)
 
 ### Introduction
 Zostel is one of the largest and oldest networks of hostels and homes in India, targeting backpackers and budget travelers. Founded in 2013, Zostel aims to promote a culture of traveling and social exchange by providing affordable, safe, and centrally located accommodation. 
