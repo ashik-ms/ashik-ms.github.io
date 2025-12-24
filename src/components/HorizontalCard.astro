@@ -1,9 +1,9 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
-const BASE = import.meta.env.BASE_URL || '/';
-const resolvedTagUrl = tag_url && tag_url.startsWith('/') ? `${BASE}${tag_url.slice(1)}` : tag_url;
-const resolvedImg = img && img.startsWith('/') ? `${BASE}${img.slice(1)}` : img;
+const BASE = import.meta.env.BASE_URL || '';
+const resolvedTagUrl = tag_url && tag_url.startsWith('/') ? `${BASE}${tag_url}` : tag_url;
+const resolvedImg = img && img.startsWith('/') ? `${BASE}${img}` : img;
 ---
 
 <div

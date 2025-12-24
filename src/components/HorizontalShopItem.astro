@@ -12,8 +12,8 @@ const {
   custom_link = false,
   custom_link_label = "",
 } = Astro.props;
-const BASE = import.meta.env.BASE_URL || '/';
-const resolvedImg = img && img.startsWith('/') ? `${BASE}${img.slice(1)}` : img;
+const BASE = import.meta.env.BASE_URL || '';
+const resolvedImg = img && img.startsWith('/') ? `${BASE}${img}` : img;
 ---
 
 <div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">

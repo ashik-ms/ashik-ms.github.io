@@ -7,8 +7,8 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 export interface Props extends BlogSchema {}
 
 const { title, description, pubDate, updatedDate, heroImage, badge, tags = [] } = Astro.props;
-const BASE = import.meta.env.BASE_URL || '/';
-const resolvedHeroImage = heroImage && heroImage.startsWith('/') ? `${BASE}${heroImage.slice(1)}` : heroImage;
+const BASE = import.meta.env.BASE_URL || '';
+const resolvedHeroImage = heroImage && heroImage.startsWith('/') ? `${BASE}${heroImage}` : heroImage;
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("ll");
 ---
