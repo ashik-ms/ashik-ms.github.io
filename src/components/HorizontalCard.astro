@@ -1,6 +1,5 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
-import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 const BASE = import.meta.env.BASE_URL || '/';
 const resolvedTagUrl = tag_url && tag_url.startsWith('/') ? `${BASE}${tag_url.slice(1)}` : tag_url;
@@ -14,11 +13,8 @@ const resolvedImg = img && img.startsWith('/') ? `${BASE}${img.slice(1)}` : img;
     <div class="hero-content flex-col md:flex-row">
       {
         img && (
-          <Image
+          <img
             src={resolvedImg}
-            width={750}
-            height={422}
-            format="webp"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
           />

@@ -45,7 +45,7 @@ Community Connect Tab: A digital platform that becomes active upon check-in, all
 #### Differentiation from Current Features
 The introduction of **ZoWorks** differentiates Zostel by integrating work-friendly environments with their existing social and travel offerings. Unlike traditional hostels, Zostel's new feature focuses on blending professional and leisure needs seamlessly.
 
-![ZoWorks mockup](/public/Zostel/zoworks.png)
+![ZoWorks mockup](/Zostel/zoworks.png)
 
 #### Revenue Gains
 ZoWorks is expected to attract a new segment of travelers who prioritize work flexibility. This feature can lead to increased occupancy rates, higher customer satisfaction, and the potential to charge premium rates for enhanced services.
