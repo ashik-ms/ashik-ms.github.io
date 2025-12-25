@@ -10,14 +10,24 @@ export interface Props {
 	ogType?: string;
 }
 
-const BASE = import.meta.env.BASE_URL || '';
-const { title, description, image = `${BASE}/social_img.webp`, ogType = 'website' } = Astro.props;
+const BASE = import.meta.env.BASE_URL && import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL : '';
+const defaultImage = BASE ? `${BASE}/social_img.webp` : '/social_img.webp';
+const { title, description, image = defaultImage, ogType = 'website' } = Astro.props;
+
+// Construct absolute URL for og:image and twitter:image
+let imageUrl;
+try {
+  imageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || 'https://ashik-ms.github.io').toString();
+} catch (e) {
+  // Fallback to default image if URL construction fails
+  imageUrl = new URL(defaultImage, Astro.site || 'https://ashik-ms.github.io').toString();
+}
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/x-icon" href={`${BASE}/favicon-16x16.png`} />
+<link rel="icon" type="image/x-icon" href={BASE ? `${BASE}/favicon-16x16.png` : '/favicon-16x16.png'} />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
@@ -30,11 +40,11 @@ const { title, description, image = `${BASE}/social_img.webp`, ogType = 'website
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.site ?? Astro.url)} />
+<meta property="og:image" content={imageUrl} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.site ?? Astro.url)} />
+<meta property="twitter:image" content={imageUrl} />
