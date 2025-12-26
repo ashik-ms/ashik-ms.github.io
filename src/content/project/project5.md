@@ -2,7 +2,7 @@
 title: "Predicting U.S. Core Inflation Using Machine Learning"
 description: "Built a neural network regression model to predict U.S. core inflation using macroeconomic indicators (2014–2024), with evaluation visuals and insights geared toward policy and scenario analysis."
 pubDate: "Dec 15 2024"
-heroImage: "/predictinginflation/hero.png"
+heroImage: "/predictinginflation/page_10_img_1.png"
 tags: ["Machine_Learning", "Economics", "Time_Series", "Python"]
 ---
 
