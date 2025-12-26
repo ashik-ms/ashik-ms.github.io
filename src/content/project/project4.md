@@ -17,7 +17,7 @@ The system allows users to ask natural-language questions about financial concep
 
 ## High-Level Architecture
 
-![RAG System Architecture](/rag/system-architecture.png)
+![RAG System Architecture](/rag/image1.png)
 
 At a high level, the system combines:
 - A **frontend** that captures user queries
@@ -29,7 +29,7 @@ At a high level, the system combines:
 
 ## Step-by-Step Flow (Simple View)
 
-![RAG Flow Diagram](/rag/flow-diagram.png)
+![RAG Flow Diagram](/rag/image2.webp)
 
 1. **User asks a question** (e.g., “What is EBITDA?” or “Explain recent earnings trends”)
 2. The query is sent to a **backend Python FastAPI service**
@@ -42,7 +42,7 @@ At a high level, the system combines:
 
 ## Agent & Tooling Logic
 
-![Agent Decision Flow](/rag/agent-decision.png)
+![Agent Decision Flow](/rag/image3.png)
 
 The LangChain agent decides dynamically:
 - Whether a tool is required (search, retrieval, calculator, etc.)
@@ -58,7 +58,7 @@ The LangChain agent decides dynamically:
 
 ## Vector Search & Retrieval
 
-![Vector Database Flow](/rag/vector-search.png)
+![Vector Database Flow](/rag/image4.jpg)
 
 - Financial documents are split into chunks
 - Each chunk is converted into **vector embeddings**
