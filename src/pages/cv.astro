@@ -21,12 +21,15 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="MS in Information Systems"
-      subtitle="[2024] to [2026] at [Stevens Institute of Technology], [NJ], [USA]"
-    />
+      title="Master of Science in Information Systems"
+      subtitle="December 2025 at Stevens Institute of Technology, School of Business, Hoboken, NJ"
+    >
+      GPA: 3.92/4.0<br/>
+      Relevant Courses: Data Analytics & Machine Learning, Integrating Information Systems, Data Management, Management of AI
+    </TimeLineElement>
     <TimeLineElement
-      title="Global Management Program"
-      subtitle="[2023] to [2024] at [SP Jain Institute of Management and Research], [Mumbai], [India]"
+      title="Bachelor of Technology in Electronics Engineering"
+      subtitle="May 2020 at St Josephs College of Engineering and Technology, Palai, India"
     />
   </div>
 
@@ -36,20 +39,69 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
+      title="Research Analyst"
+      subtitle="June 2025 – December 2025 at Bachaidus LLC, Bethesda, MD"
+    >
+      <ul class="list-disc mx-6 mb-3">
+        <li>ML Data Engineering: Performed data preprocessing on financial datasets using Python and Pandas, ensuring high-quality training data for ML models through feature engineering and outlier detection.</li>
+        <li>System Architecture: Designed technical architecture for AI-powered platform, identifying scalability improvements for model deployment and real-time inference.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Graduate Teaching Assistant"
+      subtitle="September 2025 – December 2025 at Stevens Institute of Technology, Hoboken, NJ"
+    >
+      <ul class="list-disc mx-6 mb-3">
+        <li>AI Course Instruction: Graded assignments and provided technical feedback for graduate-level Management of AI course, evaluating student understanding of AI ethics, governance, ML deployment strategies, and enterprise AI implementation.</li>
+        <li>Student Mentorship: Mentored students on AI project development, prompt engineering techniques, and practical applications of LLMs in business contexts.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
       title="Software Developer"
-      subtitle="From [2022] to [present] at [Entym], [India]"
+      subtitle="March 2022 – January 2024 at Entym Inc, Delhi, India"
     >
-    Architected various applications
+      <ul class="list-disc mx-6 mb-3">
+        <li>ML Data Pipeline: Engineered distributed pipeline using Redis Streams processing 10K+ daily records for ML workflows, improving scalability by 200%.</li>
+        <li>Analytics Platform: Built analytics dashboard with 25+ visualizations using SQL, enabling data-driven decisions.</li>
+        <li>Full-Stack Development: Developed Vue.js application with intelligent workflow automation and AI-powered recommendation features.</li>
+        <li>Cloud Deployment: Deployed containerized applications using Docker on Linux with 99.9% uptime, implementing CI/CD pipelines.</li>
+        <li>API Integration: Integrated third-party APIs (payments, communications) establishing foundation for AI service expansion.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Senior Software Engineer"
-      subtitle="From [2021] to [2022] at [Claysys Technologies],[India]"
+      title="Software Engineer"
+      subtitle="March 2021 – February 2022 at Claysys Technologies, Kochi, India"
     >
+      <ul class="list-disc mx-6 mb-3">
+        <li>NLP Search Platform: Built backend APIs for NLP-based knowledge base with semantic search, reducing retrieval time from minutes to under 5 seconds for 350K+ members.</li>
+        <li>Data Aggregation: Developed data aggregation module integrating Finicity and Plaid APIs, enabling instant account linking across 12,000+ financial institutions.</li>
+        <li>Team Leadership: Led 3-person API team integrating banking systems, delivering critical financial solutions.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Projects</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Agentic AI Chatbot with LangChain"
+      subtitle="September 2025 – October 2025 | LangChain, ReactJS, Python"
+    >
+      Built an agent system with dynamic tool selection and multi-step reasoning using ReAct pattern. Integrated web search APIs, custom function calling, and real-time streaming.
     </TimeLineElement>
     <TimeLineElement
-      title="Associate Programmer Trainee"
-      subtitle="From [2020] to [2020] at [Techneurons Consulting Solutions], [India]"
+      title="RAG Pipeline for Financial Analysis"
+      subtitle="June 2025 | RAG, ChromaDB, LangChain"
     >
+      Designed end-to-end RAG system integrating LLMs with vector database for context-aware analysis. Implemented document chunking, semantic embeddings, and hybrid search strategies, reducing analysis time by 75%.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Predicting Inflation using Machine Learning"
+      subtitle="November 2024 – December 2024 | TensorFlow, Keras"
+    >
+      Built CNN regression model using TensorFlow to forecast U.S. inflation with 98% accuracy through hyperparameter tuning and feature engineering.
     </TimeLineElement>
   </div>
 
@@ -59,11 +111,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Azure Administrator Associate - AZ 104</a>
+      <a href="#" target="_blank">Microsoft Certified: Azure Administrator Associate</a>
       <img src={(import.meta.env.BASE_URL && import.meta.env.BASE_URL !== '/') ? `${import.meta.env.BASE_URL}/azure-administrator-associate.png` : '/azure-administrator-associate.png'} width="100" height="100"> 
     </li>
     <li>
-      <a href="#" target="_blank"> Project Management</a>
+      <a href="#" target="_blank">AWS Certified AI Practitioner (AIF-C01)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank">Project Management Professional (PMI)</a>
     </li>
   </ul>
 
@@ -71,12 +126,69 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Azure</li>
-    <li>C#</li>
-    <li>JavaScript</li>
-    <li>Stakeholder Management</li>
-    <li>Project Management</li>
+  <div class="mb-5">
+    <div class="text-xl font-bold mb-2">AI/ML</div>
+    <ul class="list-disc md:columns-3 columns-2 mx-6 mb-5">
+      <li>LangChain</li>
+      <li>LangGraph</li>
+      <li>RAG</li>
+      <li>Vector Databases</li>
+      <li>Pinecone</li>
+      <li>ChromaDB</li>
+      <li>Prompt Engineering</li>
+      <li>Agent Workflows</li>
+      <li>LLM APIs</li>
+      <li>OpenAI</li>
+      <li>Claude</li>
+      <li>Gemini</li>
+      <li>Model Evaluation</li>
+      <li>Embeddings</li>
+    </ul>
+  </div>
 
+  <div class="mb-5">
+    <div class="text-xl font-bold mb-2">Languages</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-5">
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>C#</li>
+      <li>SQL</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-bold mb-2">Frameworks</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-5">
+      <li>FastAPI</li>
+      <li>Vue.js</li>
+      <li>Pandas</li>
+      <li>TensorFlow</li>
+      <li>Keras</li>
+      <li>Docker</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-bold mb-2">Cloud & Tools</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-5">
+      <li>Azure (Certified)</li>
+      <li>AWS SageMaker</li>
+      <li>AWS Bedrock</li>
+      <li>Linux</li>
+      <li>Redis</li>
+      <li>Git</li>
+      <li>PostgreSQL</li>
+      <li>MLFlow</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Extracurricular Activities</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10">
+    <li>Global Scaling Challenge 2025: Ranked Top 15 out of 60 international teams (University of New Mexico)</li>
+    <li>Published Research: Co-authored "Waste Classification using CNN on Edge Devices" - peer-reviewed ML paper</li>
   </ul>
 </BaseLayout>
